@@ -37,6 +37,11 @@ body{
     font-weight: 300;
 }
 
+h2{
+    padding: 3.5rem 0 2.5rem 0;
+    text-align: center; 
+}
+
 /* Heading */
 .navigation{
     width: 100%;
@@ -73,17 +78,22 @@ body{
 }
 
 .navigation li a:hover::after{
-    animation: navSlide 0.4s ease-out;
+    animation: navSlide 1s ease-out;
     background: #E73C7E;
 }
 
 @keyframes navSlide{
     0%{
         width: 0;
-        background: #E73C7E;
+        background: #23A6D5;
+    }
+
+    50%{
+        background: #23A6D5;
     }
 
     100%{
+        background: #E73C7E; 
         width: 100%;
     }
 }
@@ -128,14 +138,8 @@ h1.text-name{
     background-color: #eee;
 }
 
-.section-education h2{
-    padding: 3.5rem 0 2.5rem 0;
-    text-align: center;
-}
-
 .school{
-    text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 300;
 }
 
@@ -153,8 +157,57 @@ h1.text-name{
 
 /* Skills */
 
-.section-skills{
-    height: 100vh;
+.section-skills ul{
+    list-style: none;
+}
+
+.section-skills li::before{
+    content: "\2022";
+    color: #23A6D5;
+    font-weight: bold;
+    display: inline-block; 
+    width: 2rem;
+}
+
+.section-skills li:hover::before{
+    color: #E73C7E;
+}
+
+/* Work and projects */
+
+.section-work{
+    margin-bottom: 7rem;
+}
+
+a.colorful:link,
+a.colorful:visited
+{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 14rem;
+    padding: 0.8rem 1.2rem;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease-in-out infinite;
+}
+
+@keyframes gradientBackground{
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
 }
 
 
+footer{
+    height: 20vh;
+    background-color: gray;
+}
