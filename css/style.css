@@ -1,0 +1,160 @@
+
+ /*
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: headingGradient 10s ease-in-out infinite;
+
+    @keyframes gradientBackground{
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+    */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Heading */
+.navigation{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navigation li{
+    display: inline-block;
+    font-size: 1.9rem;
+    margin: 0.5rem 1.5rem;
+    font-weight: 300;
+}
+
+.navigation li a:link,
+.navigation li a:visited{
+    color: #777;
+    text-decoration: none;
+    word-spacing: 0.2rem;
+    transition: color 0.4s;
+}
+
+.navigation li a::after{
+    content: "";
+    display: block;
+    height: 0.1rem;
+    background: transparent;
+}
+
+.navigation li a:hover{
+    color: #E73C7E;
+}
+
+.navigation li a:hover::after{
+    animation: navSlide 0.4s ease-out;
+    background: #E73C7E;
+}
+
+@keyframes navSlide{
+    0%{
+        width: 0;
+        background: #E73C7E;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+/*Navbar*/
+.scrolled{
+    background-color: #ffffff;
+    transition: background 0.5s;
+}
+
+.mid-left{
+    height: 100vh;
+    width: 100%;
+    background: url(../img/empire.jpg);
+    background-size: cover;
+    background-position: 12rem 9rem;
+    overflow: hidden;
+}
+
+h1.text-name{
+    position: absolute;
+    top: 13rem;
+    left: 3rem;
+    background: rgba(234, 234, 234, 0.7);
+    padding: 1rem;
+}
+
+.about{
+    font-size: 3rem;
+    padding: 1rem 0;
+    font-weight: 300;
+}
+
+.about + p{
+    font-size: 1.9rem;
+}
+
+/* Education */
+
+.section-education{
+    height: 100vh;
+    background-color: #eee;
+}
+
+.section-education h2{
+    padding: 3.5rem 0 2.5rem 0;
+    text-align: center;
+}
+
+.school{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.school+p{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.school-logo{
+    display:block;
+    width: 30rem;
+    margin: 0 auto;
+}
+
+/* Skills */
+
+.section-skills{
+    height: 100vh;
+}
+
+
