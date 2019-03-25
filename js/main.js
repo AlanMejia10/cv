@@ -1,14 +1,16 @@
 
 $(function () {
+    // turns on the background of the navbar
     $(document).on("scroll", function () {
         let $navbar = $(".navigation");
         $navbar.toggleClass("scrolled", $(this).scrollTop() > $navbar.height());
     });
 
-    $(".navigation li").on("click", function (event) {
-        console.log(event.target);
-        $("html, body").animate({
-            scrollTop: $(".section-education").offset().top
-        }, 2000);
+    //smooth navigation
+    $(".navigation li a").on("click", function(e){
+        e.preventDefault();
+        $("html,body").animate({
+            scrollTop: $(this.hash).offset().top
+        },1500);
     });
 });
