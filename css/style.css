@@ -87,9 +87,10 @@ h2{
 .mid-left{
     height: 100vh;
     width: 100%;
-    background: url(../img/empire.jpg);
+    background: url(../img/generative.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: 12rem 9rem;
+    background-position: 0rem 6rem;
     overflow: hidden;
 }
 
@@ -159,6 +160,14 @@ h2{
 
 .section-work{
     margin-bottom: 7rem;
+}
+
+.work-space{
+    margin: 3rem 0;
+}
+
+.vid-pos{
+    margin-top: 7rem;
 }
 
 .candy{
