@@ -171,7 +171,8 @@ h2{
 }
 
 .candy{
-    margin: 6rem 0 2rem 0;
+    display: block;
+    padding: 3rem 0 0rem 0;
 }
 
 a.colorful:link,
@@ -185,7 +186,7 @@ a.colorful:visited
     background-size: 400% 400%;
     animation: gradientBackground 10s ease-in-out infinite;
 
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 @keyframes gradientBackground{
